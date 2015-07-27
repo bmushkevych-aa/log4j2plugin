@@ -14,6 +14,19 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <distributionManagement>
+        <snapshotRepository>
+            <id>repo.mobidia.com</id>
+            <name>repo.mobidia.com-snapshots</name>
+            <url>http://repo.mobidia.com:8081/artifactory/libs-snapshot-local/</url>
+        </snapshotRepository>
+        <repository>
+            <id>repo.mobidia.com</id>
+            <name>repo.mobidia.com-releases</name>
+            <url>http://repo.mobidia.com:8081/artifactory/libs-release-local/</url>
+        </repository>
+    </distributionManagement>
+
     <dependencies>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
@@ -45,6 +58,19 @@
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.4.6</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-xml</artifactId>
+            <version>2.6.0</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <profiles>
